@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vaiva question Laravel</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Main CSS-->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Font-icon css-->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="app sidebar-mini">
+<aside class="app-sidebar">
+    <ul class="app-menu">
+        <li><a class="app-menu__item active" href="index.html"><span class="app-menu__label">Laravel</span></a></li>
+        <li><a class="app-menu__item active" href="raw-php.html"><span class="app-menu__label">Laravel</span></a></li>
+        <li><a class="app-menu__item active" href="problems.html"><span class="app-menu__label">Problems</span></a></li>
+    </ul>
+</aside>
+<main class="app-content">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="tile">
+                <table class="table table-bordered">
+                    <thead>
+                    <tr>
+                        <th>Question</th>
+                        <th>Answer</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>What is Middleware and how to register middleware</th>
+                        <td>
+                            Middleware filters the incoming HTTP request to your application. <b>"app/Http/Kernel.php"</b> To register middleware
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Explain reverse routing in Laravel</th>
+                        <td>
+                            <ol>
+                                <li>Laravel Reverse routing is the process of generating the URL, based on name or symbol.</li>
+                                <li>It generates URL's based on route declarations.</li>
+                                <li>Reverse routing makes your application so much more flexible and helps the developer to write cleaner codes in View.</li>
+                                <li>It defines a relationship between links and Laravel routes.</li>
+                            </ol>
+                            <code>
+                                // route declaration
+                                <br>
+                                Route::get('login', 'users@login');
+                            </code>
+                            <br>
+                            <code>
+                                // reverse routing
+                                <br>
+                                {{ HTML::link_to_action('users@login') }}
+                            </code>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Service container vs service provider</th>
+                        <td>
+                            <a target="_blank" href="https://code.tutsplus.com/tutorials/how-to-register-use-laravel-service-providers--cms-28966">See here</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>How will you register service providers</th>
+                        <td>
+                            <code>config/app.php</code> Contains provider array where we register these provider
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>HTTP GET Vs POST method</th>
+                        <td>
+                            <ol>
+                                <li>Post method is little safer than get</li>
+                                <li>Get method can be cached but post not</li>
+                                <li>Get method maximum data length is 2048 character, while post method has no limit</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Explain validation concept in Laravel.</th>
+                        <td>
+                            By default, Laravel's base controller class uses a <code>ValidatesRequests</code> trait
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Fecade Design pattern in laravel</th>
+                        <td>
+                            <ol>
+                                <li><a href="https://www.youtube.com/watch?v=AyOU4bAaYNM&t=247s" target="_blank">Watch this video</a></li>
+                                <li><a href="https://stackoverflow.com/questions/42223986/what-is-facades-used-in-laravel" target="_blank">Read this article</a></li>
+                            </ol>
+                            <p>Facade Pattern combines small interface into one to provide a specific task</p>
+                            <p>In laravel, we can use no static method statically through fecade pattern. Example <code>DB::table()</code> <code>Route::get()</code></p>
+                        </td>
+                    </tr><tr>
+                        <th>Fecade Design pattern in laravel</th>
+                        <td>
+                            <ol>
+                                <li><a href="https://www.youtube.com/watch?v=AyOU4bAaYNM&t=247s" target="_blank">Watch this video</a></li>
+                                <li><a href="https://stackoverflow.com/questions/42223986/what-is-facades-used-in-laravel" target="_blank">Read this article</a></li>
+                            </ol>
+                            <p>Facade Pattern combines small interface into one to provide a specific task</p>
+                            <p>In laravel, we can use no static method statically through fecade pattern. Example <code>DB::table()</code> <code>Route::get()</code></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Chunk vs Cursor Method</th>
+                        <td>
+                            <p><li><a href="https://laravel.com/docs/5.4/eloquent#chunking-results" target="_blank">Read this article</a></li></p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Laravel Error</th>
+                        <td>
+                            <ol>
+                                <li>200: oK</li>
+                                <li>201: Created</li>
+                                <li>400: Bad request</li>
+                                <li>401: Unauthorized (Invalid login credentials.)</li>
+                                <li>403: Forbidden	(You do not have enough permissions to perform this action.)</li>
+                                <li>404: Not found</li>
+                                <li>500: Internal server error</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Differentiate between delete() and softDeletes().</th>
+                        <td>
+                            <p><b>delete():</b> remove all record from the database table.</p>
+                            <p><b>softDeletes():</b> It does not remove the data from the table. It is used to flag any record as deleted.</p>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>What is Laravel API rate limit</th>
+                        <td>
+                            <p><a href="https://fbutube.com/content/ddos-prevention-methods-laravel-throttle-to-avoid-ddos-attack#:~:text=A%20denial%2Dof%2Dservice%20attack,services%20unavailable%20temporarily%20or%20indefinitely." target="_blank">Read this article</a></p>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</main>
+</body>
+</html>
